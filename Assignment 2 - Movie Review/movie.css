@@ -1,0 +1,93 @@
+body {
+	background-image: url('images/moviebg.png');
+}
+
+div.banner {
+	background-image: url('images/rancidbannerbg.png');	
+}
+
+div.rotten {
+	background-image: url('images/rottenlargebg.png');
+	font-size: 48pt;
+	font-weight: bold;
+	color: red;
+}	
+
+img.rancidbanner {
+	display: block;
+	margin: auto;		
+}
+
+h1 {
+	font-size: 24pt;
+	text-align: center;
+	font-family: georgia;
+	text-shadow: 3px 3px #999999;
+}
+
+
+div.review {
+	margin-left: 250px;
+	background-color: #EEEEEE
+}	
+
+div.overview {
+	width: 250px;
+	margin-right: 250px;
+	background-color: #A2B964	
+
+}
+
+div.poot {
+	margin-top: 0;
+}
+
+dl {
+	margin-left: 15px;
+	font-size: 12pt;
+	font-family: Arial;
+}
+
+dt {
+	margin-top: 15pt;
+	font-weight: bold;
+}
+
+div.main{
+	display: flex;
+	justify-content: center;
+}
+
+div.review > p {
+	margin: 50px;	
+}
+
+div.review > p > img {
+	float: left;
+}
+
+p.quotebubble {
+	font-size: 13pt;
+	font-family: georgia;
+	border: 2px solid #CCCCCC;
+ 	border-radius: 12px;
+	padding: 20px 20px 30px 20px;
+	background-color: white;
+}
+
+.linkstype {
+	list-style: none;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+#w3c {
+	position: relative;
+}
+
+footer {
+	background: #A2B964;
+	text-align: center;
+	font-weight: bold;
+	font-family: Arial;
+}

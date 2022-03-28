@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <html lang="en">
+<head>
+	<title>speedreader</title>
+	<script type = "text/javascript" src = "speedreader.js" ></script>
+	<link rel = "stylesheet" type = "text/css" href = "speedreader.css" />
+</head>
+<body>
+
+	<h1>SpeedReader</h1>
+
+	<div id = "displayReader"></div>
+	<div id = "controllerSet">
+		<div class = "playController">
+			<p>Play Controlls:</p>
+            <button id = "start" type = "button">Start</button>
+			<button id = "stop" type = "button">Stop</button>
+		</div>	
+    		<div class = "speed">
+			<p>Speed:</p>
+			<select id = "speed">
+				<option value = "10">200 wpm</option>
+				<option value = "100">300 wpm</option>
+				<option value = "300">250 wpm</option>
+				<option value = "500">400 wpm</option>
+				<option value = "700">450 wpm</option>
+				<option value = "1000">500 wpm</option>
+			</select>
+		</div>
+	    	<div class = "size">
+			<p>Size:</p>
+			<label id = middle><input id = "36pt" type = "radio" name = "size" checked = "checked"/>Medium</label>
+			<label id = big><input id = "48pt" type = "radio" name = "size" checked = "checked"/>Big</label>
+			<label id = bigger><input id = "60pt" type = "radio" name = "size" checked = "checked"/>Bigger</label>
+		</div>
+
+	</div>
+	<div id = "input">
+		<p>Input Text:</p>
+		<textarea id = "inputText" rows = "10" cols = "80">The quick brown fox jumped over the fence and then she went after the sheep until the sheepdog chased the fox away.</textarea>
+	</div>
+</body>
+</html>
+

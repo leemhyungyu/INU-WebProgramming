@@ -16,7 +16,9 @@ window.onload = function () {
 
     let biggerLableBtn= document.getElementById("bigger");
     biggerLableBtn.onclick = changeBiggerSize;
-
+    
+    let speedSelect = document.getElementById("speed");
+    speedSelect.onchange = changeSelect;
 };
 
 
@@ -25,24 +27,33 @@ function startBtnClicked() {
     var textList = document.getElementById("inputText").value;
     var text = textList.split(/\s+/);
     var index = 0;
-
-    if (text.length > 0) {
-        timer = setInterval(function() {
-        let select = document.getElementById("speed");
-        select.onchange = changeSelect;
+    
+    document.getElementById("stop").disabled=false;
+    document.getElementById("start").disabled=true;
+    
+    playSpeedReader = setInterval(function() {
         display.innerHTML = text[index++];
-        index = index % text.length;
+        
+        if (index >= text.length) {
+            clearInterval(playSpeedReader);
+            document.getElementById("displayReader").innerHTML = "";
+        }
     }, speed);
-  }
+    
 }
 
 function stopBtnClicked() {
+    clearInterval(playSpeedReader);
     document.getElementById("displayReader").innerHTML = "";
+    document.getElementById("stop").disabled = true;
+    document.getElementById("start").disabled = false;
 }
 
 function changeSelect() {
     var speedSelect = document.getElementById("speed");
     speed = speedSelect.options[speedSelect.selectedIndex].value;
+    document.getElementById("displayReader").innerHTML = speed;
+
 }
 
 function changeMiddleSize() {

@@ -39,6 +39,8 @@ var playSpeedReader;
             
             // displaySpeedReader함수를 speed딜레이로 실행시킴
             playSpeedReader = setInterval(displaySpeedReader, speed);
+        
+            index = 0;
     }
     
     // stop버튼을 눌렀을 떄 실행되는 함수
@@ -56,7 +58,6 @@ var playSpeedReader;
     
     // speed select의 값이 바꼈을 때 실행되는 함수
     function changeSelect() {
-            
             // 선택된 값을 가져옴
             var speedSelect = document.getElementById("speed");
             speed = speedSelect.options[speedSelect.selectedIndex].value;
@@ -64,7 +65,6 @@ var playSpeedReader;
             // displaySpeedReader함수를 중단시키고, 선택된 speed값으로 다시 실행시킴
             clearInterval(playSpeedReader);
             playSpeedReader = setInterval(displaySpeedReader, speed);
-
     }
         
     // medium버튼이 클릭됐을 떄 실행되는 함수
@@ -90,7 +90,6 @@ var playSpeedReader;
             var result = text[index++];
             result = result.replace(/[,.!?;]$/, '');
             document.getElementById("displayReader").innerHTML = result;
-            
         }
     }
 })();

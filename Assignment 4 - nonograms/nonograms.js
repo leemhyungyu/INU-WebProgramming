@@ -2,7 +2,6 @@
 
 (function() {
     let tile = document.getElementsByClassName("box");
-    let clearBtn = document.getElementById("clearBtn");
 
     window.onload = function() {
         
@@ -11,6 +10,7 @@
             tile[i].addEventListener("click", tileClicked);
             
         }
+        let clearBtn = document.getElementById("clearBtn");
         clearBtn.addEventListener("click", clearBtnClicked);
         
     };
@@ -26,9 +26,8 @@
             this.classList.add('crossed-out');
         // x표시인 타일이면
         } else if (this.classList.contains('crossed-out')) {
-            // x표시를 지우고 검정색 타일로 바꿔줌
+            // x표시를 지움
             this.classList.remove('crossed-out');
-            this.classList.add('filled');
         // 만약 클릭되지 않은 타일이면
         } else {
             this.classList.add('filled');
